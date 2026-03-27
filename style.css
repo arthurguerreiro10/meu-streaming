@@ -1,0 +1,354 @@
+/* ===== RESET GLOBAL ===== */
+* {
+    box-sizing: border-box; /* garante que padding/border sejam inclusos na width total */
+}
+/* ===== RESET FIGURE ===== */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 120px;
+}
+
+/* ===== VARIÁVEIS DE TEMA (CSS Custom Properties) ===== */
+:root {
+    --bg: #141414; /* cor de fundo principal (muito escuro, estilo Netflix) */
+    --card: #1f1f1f; /* cor de fundo dos cards/perfis (cinza escuro) */
+    --text: #ffffff; /* cor de texto principal (branco) */
+    --subtext: #b3b3b3; /* cor de texto secundário (cinza claro) */
+    --accent: #e50914; /* cor de destaque/hover (vermelho Netflix) */
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* sombra padrão para depth (profundidade visual) */
+    --radius: 14px; /* border-radius padrão para elementos arredondados */
+}
+
+/* ===== LIGHT MODE VARIABLES ===== */
+body.light-mode {
+    --bg: #ffffff; /* fundo branco */
+    --card: #f5f5f5; /* cards cinza claro */
+    --text: #000000; /* texto preto */
+    --subtext: #666666; /* texto secundário cinza */
+    --accent: #e50914; /* mantém vermelho */
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* sombra leve */
+    background: var(--bg); /* fundo sólido branco */
+    transition: background-color 0.8s ease-in-out, color 0.5s ease, border-color 0.5s ease;
+}
+
+
+/* ===== BODY - Container Principal ===== */
+body {
+    margin: 0; /* remove espaço padrão do navegador */
+    min-height: 100vh; /* garante que body ocupe toda altura da tela */
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif; /* fonte global estilo Netflix */
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: radial-gradient(circle at 20% 0%, #222 0%, #111 45%, var(--bg) 100%); /* gradiente radial com profundidade */
+    color: var(--text); /* define cor padrão do texto */
+    display: flex; /* ativa flexbox para alinhamento */
+    align-items: center; /* centraliza itens verticalmente (eixo Y) */
+    justify-content: center; /* centraliza itens horizontalmente (eixo X) */
+}
+
+h1,
+figcaption,
+button {
+    font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.015em;
+}
+
+
+/* ===== HEADER - Barra de Navegação ===== */
+header {
+    display: flex;
+    justify-content: center; /* ← centraliza a logo */
+    align-items: center;
+    border-bottom: 1px solid #2a2a2a; /* linha de separação visual no rodapé */
+    padding: 1rem 2rem; /* espaçamento interno (1rem acima/abaixo, 2rem esquerda/direita) */
+    position: fixed; /* fixa no topo da tela (não move com scroll) */
+    width: 100%; /* ocupa toda largura da tela */
+    top: 0; /* posiciona no topo absoluto */
+    z-index: 20; /* garante que fica acima de outros elementos */
+    background: rgba(20, 20, 20, 0.95); /* fundo semi-transparente (95% opacidade) */
+    border-bottom: none; /* remove borda inferior para um visual mais limpo */
+}
+
+/* ===== MAIN - Conteúdo Principal ===== */
+main {
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative; /* para posicionar o botão */
+}
+
+/* ===== THEME TOGGLE BUTTON ===== */
+#theme-toggle {
+    position: fixed; /* fixo na viewport */
+    top: 1rem;
+    right: 1rem;
+    background: transparent; /* remove fundo */
+    color: var(--text);
+    border: none; /* remove borda */
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10; /* acima de outros elementos */
+}
+
+#theme-toggle:hover {
+    color: var(--accent); /* muda cor no hover */
+}
+
+/* ===== NAV UL - Lista de Navegação ===== */
+nav ul {
+    display: flex; /* ativa flexbox para alinhar itens em linha */
+    align-items: center; /* centraliza itens verticalmente na linha */
+    gap: 1.2rem; /* espaçamento entre itens (16px entre cada link) */
+    margin: 0; /* remove espaço padrão */
+    padding: 0; /* remove espaço interno padrão */
+    list-style: none; /* remove bullets padrão da lista */
+}
+
+/* ===== NAV A - Links de Navegação ===== */
+nav a {
+    color: var(--text); /* cor do texto em branco */
+    text-decoration: none; /* remove sublinhado padrão dos links */
+    font-weight: 600; /* deixa texto mais espesso/negrito */
+    font-size: 0.95rem; /* tamanho relativo (95% do tamanho padrão) */
+    transition: color 0.2s ease; /* mudança de cor suave (0.2 segundos) */
+}
+
+/* ===== NAV A:HOVER/FOCUS - Interação com Links ===== */
+nav a:hover,
+nav a:focus-visible {
+    color: var(--accent); /* muda para vermelho ao passar mouse ou navegar com teclado */
+}
+
+
+
+/* ===== H1 - Título Principal ===== */
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: 1.5rem; /* espaço abaixo do título */
+}
+
+/* ===== .PROFILES - Container de Perfis ===== */
+.profiles {
+    display: flex; /* mais simples e funciona melhor aqui */
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* perfis totalmente colados */
+    flex-wrap: wrap; /* quebra no celular */
+    list-style: none; /* remove bullets da lista */
+    padding: 0; /* remove padding padrão */
+    margin: 0; /* remove margem padrão */
+}
+
+.profiles li {
+    list-style: none; /* remove bullets dos itens da lista */
+    margin: 0;
+    padding: 0;
+}
+
+.profile {
+    background: transparent;
+    border: none;
+    padding: 0rem; /* esse padding é o que cria o espaço entre os cards */
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* ===== MEDIA QUERY - Perfis em 2 Colunas em Tablets/iPads <= 900px ===== */
+@media (max-width: 900px) {
+    .profiles {
+        display: grid; /* usa grid para 2 colunas */
+        grid-template-columns: repeat(2, 1fr); /* duas colunas iguais */
+        gap: 1rem; /* espaço entre perfis */
+        flex-direction: unset; /* reseta para grid */
+    }
+
+    .profile img {
+        width: 120px; /* tamanho médio para tablets */
+    }
+
+    figcaption {
+        font-size: 0.9rem; /* texto médio */
+        margin-top: 0.5rem; /* espaço médio */
+    }
+}
+
+/* ===== MEDIA QUERY - Perfis em 2 Colunas em Celulares <= 640px ===== */
+@media (max-width: 640px) {
+    .profiles {
+        display: grid; /* usa grid para 2 colunas */
+        grid-template-columns: repeat(2, 1fr); /* duas colunas iguais */
+        gap: 1rem; /* espaço entre perfis */
+        flex-direction: unset; /* reseta para grid */
+    }
+
+    .profile img {
+        width: 100px; /* reduz tamanho para caber melhor */
+    }
+
+    figcaption {
+        font-size: 0.8rem; /* texto menor */
+        margin-top: 0.4rem; /* menos espaço */
+    }
+}
+
+/* ===== .PROFILE - Card Individual de Perfil ===== */
+.profile {
+    background: transparent; /* remove fundo cinza */
+    border: none;            /* remove borda do card */
+    padding: 0;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* ===== .PROFILE:HOVER/FOCUS - Efeito de Interação do Card ===== */
+.profile:hover {
+    transform: scale(1.08); /* zoom leve */
+}
+
+
+/* ===== .PROFILE FIGURE - Container da Imagem ===== */
+.profile figure {
+    margin: 0; /* remove margem padrão da tag figure */
+    padding: 0; /* remove padding padrão da tag figure */
+}
+
+/* ===== .PROFILE IMG - Imagem do Perfil ===== */
+.profile img {
+    display: block;
+    width: 185px;
+    max-width: 1805px; /* controla tamanho */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    image-rendering: high-quality;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 3px solid transparent; /* importante */
+    transition: 0.3s;
+}
+
+.profile:hover img {
+    border: 3px solid white;
+
+}
+
+/* ===== FIGCAPTION - Texto (Nome) do Perfil ===== */
+figcaption {
+    margin-top: 0.6rem; /* menos espaço para deixar ainda mais colado */
+    color: var(--subtext); /* texto em branco */
+    font-size: 1.1rem; /* tamanho padrão (16px) */
+    font-weight: 400; /* deixa texto mais negrito */
+}
+
+.profile:hover figcaption {
+    color: var(--text); /* muda para branco puro no hover */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== MEDIA QUERY - Estilos para Telas de Desktop Grandes (até 1200px) ===== */
+@media (max-width: 1200px) {
+    .profiles {
+        gap: 0.2rem;
+    }
+
+    .profile img {
+        width: 155px;
+    }
+
+    figcaption {
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== MEDIA QUERY - Estilos para Tablets (até 992px) ===== */
+@media (max-width: 992px) {
+    h1 {
+        font-size: clamp(1.4rem, 5vw, 2.2rem);
+    }
+
+    .profiles {
+        gap: 0.15rem;
+    }
+
+    .profile img {
+        width: 140px;
+    }
+
+    figcaption {
+        font-size: 0.92rem;
+    }
+}
+
+/* ===== MEDIA QUERY - Estilos para Celulares Médios (até 768px) ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(1.3rem, 6vw, 2rem);
+    }
+
+    .profiles {
+        gap: 0.1rem;
+    }
+
+    .profile img {
+        width: 130px;
+    }
+
+    figcaption {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* ===== MEDIA QUERY - Estilos para Telas Pequenas (até 640px) ===== */
+@media (max-width: 640px) {
+    header {
+        padding: 0.8rem 1rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 7vw, 1.8rem);
+    }
+
+    .profiles {
+        gap: 0.05rem;
+    }
+
+    
+
+    .profile img {
+        width: 120px;
+    }
+
+    figcaption {
+        font-size: 0.85rem;
+        margin-top: 0.45rem;
+    }
+
+    .profile {
+        padding: 0;
+    }
+}
