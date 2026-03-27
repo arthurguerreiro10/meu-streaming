@@ -1,0 +1,307 @@
+/* ===== RESET GLOBAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== RESET FIGURE ===== */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== CLICK SCREEN ===== */
+#click-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 1rem;
+}
+
+#click-screen img { width: 150px; }
+
+#click-screen p {
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: piscar 1.5s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+/* ===== INTRO SCREEN ===== */
+#intro-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease;
+}
+
+#intro-screen img {
+    width: 250px;
+    animation: netflix-intro 4s ease forwards;
+}
+
+#intro-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes netflix-intro {
+    0% { transform: scale(3); opacity: 0; filter: brightness(3); }
+    30% { transform: scale(1); opacity: 1; filter: brightness(1); }
+    70% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+/* ===== VARIÁVEIS DE TEMA ===== */
+:root {
+    --bg: #141414;
+    --card: #1f1f1f;
+    --text: #ffffff;
+    --subtext: #b3b3b3;
+    --accent: #e50914;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    --radius: 14px;
+}
+
+/* ===== LIGHT MODE ===== */
+body.light-mode {
+    --bg: #ffffff;
+    --card: #f5f5f5;
+    --text: #000000;
+    --subtext: #666666;
+    --accent: #e50914;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background: var(--bg);
+}
+
+body.light-mode header {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: radial-gradient(circle at 20% 0%, #222 0%, #111 45%, var(--bg) 100%);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.8s ease-in-out, color 0.5s ease;
+}
+
+h1, figcaption, button {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.015em;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+    background: transparent;
+    border-bottom: none;
+}
+
+.logo { width: 120px; }
+
+/* ===== MAIN ===== */
+main {
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* ===== THEME TOGGLE ===== */
+#theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    color: var(--text);
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 30;
+}
+
+#theme-toggle:hover { color: var(--accent); }
+
+/* ===== H1 ===== */
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== PROFILES ===== */
+.profiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profiles li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile {
+    background: transparent;
+    border: none;
+    padding: 0;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.profile:hover { transform: scale(1.08); }
+
+.profile figure {
+    margin: 0;
+    padding: 0;
+}
+
+.profile img {
+    display: block;
+    width: 185px;
+    max-width: 185px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    image-rendering: high-quality;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.profile:hover img { border: 3px solid white; }
+
+/* ===== FIGCAPTION ===== */
+figcaption {
+    margin-top: 0.6rem;
+    color: var(--subtext);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.profile:hover figcaption { color: var(--text); }
+
+/* ===== LINKS ===== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== MANAGE BTN ===== */
+.manage-btn {
+    background: transparent;
+    border: 1px solid #808080;
+    color: var(--subtext);
+    padding: 14px 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-top: 3rem;
+}
+
+.manage-btn:hover {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+body.light-mode .manage-btn:hover {
+    background: transparent;
+    color: #000;
+    border-color: #000;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 1200px) {
+    .profiles { gap: 0.2rem; }
+    .profile img { width: 155px; }
+    figcaption { font-size: 0.95rem; }
+}
+
+@media (max-width: 992px) {
+    h1 { font-size: clamp(1.4rem, 5vw, 2.2rem); }
+    .profiles { gap: 0.15rem; }
+    .profile img { width: 140px; }
+    figcaption { font-size: 0.92rem; }
+}
+
+@media (max-width: 900px) {
+    .profiles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .profile img { width: 120px; }
+    figcaption { font-size: 0.9rem; margin-top: 0.5rem; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: clamp(1.3rem, 6vw, 2rem); }
+    .profiles { gap: 0.1rem; }
+    .profile img { width: 130px; }
+    figcaption { font-size: 0.9rem; margin-top: 0.5rem; }
+}
+
+@media (max-width: 640px) {
+    header { padding: 0.8rem 1rem; }
+    nav a { font-size: 0.9rem; }
+    h1 { font-size: clamp(1.2rem, 7vw, 1.8rem); }
+    .profiles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .profile img { width: 100px; }
+    figcaption { font-size: 0.8rem; margin-top: 0.4rem; }
+    .profile { padding: 0; }
+}
