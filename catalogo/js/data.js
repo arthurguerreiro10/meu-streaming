@@ -1,30 +1,21 @@
 const profileCategories = {
     Bianca: [
         {
-            title: "Romanticos para você",
+            title: "Românticos para você",
             items: [
-                { img: "https://upload.wikimedia.org/wikipedia/en/3/3d/The_Notebook_film_poster.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=NmHCPHFMUAI" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/8/8a/Mamma_Mia%21_poster.jpg", youtube: "https://www.youtube.com/watch?v=VHaTOrRPXiU" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/5/5e/Bridgerton_S1.jpg", badge: "Nova temporada", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=gpv7ayf_tyE" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/0/0c/La_La_Land_%28film%29.png", top10: true, youtube: "https://www.youtube.com/watch?v=0pdqf4P9MB8" },
+                { img: "https://image.tmdb.org/t/p/w500/rzdPqYx7Um4FUZeD8wpXqjAUcEr.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=NmHCPHFMUAI" },
+                { img: "https://image.tmdb.org/t/p/w500/qom1SZSENdmHFNZBXbtfnkybYZ9.jpg", youtube: "https://www.youtube.com/watch?v=VHaTOrRPXiU" },
+                { img: "https://image.tmdb.org/t/p/w500/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=0pdqf4P9MB8" },
+                { img: "https://image.tmdb.org/t/p/w500/gMFBhO7TWCSbZUkTRm4mN31Nkjv.jpg", badge: "Nova temporada", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=gpv7ayf_tyE" },
             ]
         },
         {
             title: "Animações divertidas",
             items: [
-                { img: "https://upload.wikimedia.org/wikipedia/en/1/14/Frozen_2013_film_poster.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=TbQm5doF_Uc" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/0/0a/Finding_Nemo.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=2zLkjhLcxCk" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/1/1d/Tangled_poster.jpg", youtube: "https://www.youtube.com/watch?v=AESmMG6JDWY" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/a/a4/Inside_Out_2015.png", top10: true, youtube: "https://www.youtube.com/watch?v=seMwpP0yeu4" },
-            ]
-        },
-        {
-            title: "Séries em alta",
-            items: [
-                { img: "https://upload.wikimedia.org/wikipedia/en/5/5e/Bridgerton_S1.jpg", badge: "Nova temporada", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=gpv7ayf_tyE" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/3/3d/The_Notebook_film_poster.jpg", youtube: "https://www.youtube.com/watch?v=NmHCPHFMUAI" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/1/14/Frozen_2013_film_poster.jpg", badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=TbQm5doF_Uc" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/0/0c/La_La_Land_%28film%29.png", youtube: "https://www.youtube.com/watch?v=0pdqf4P9MB8" },
+                { img: "https://image.tmdb.org/t/p/w500/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=TbQm5doF_Uc" },
+                { img: "https://image.tmdb.org/t/p/w500/eVal1g3a7fOCl6e1TEex1bikqkh.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=2zLkjhLcxCk" },
+                { img: "https://image.tmdb.org/t/p/w500/vgpXmVaVyUL7GGiDeiK1mKEKzcX.jpg", youtube: "https://www.youtube.com/watch?v=AESmMG6JDWY" },
+                { img: "https://image.tmdb.org/t/p/w500/aAmfIX3TT40zUHGcCKrlOZRKC7u.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=seMwpP0yeu4" },
             ]
         }
     ],
@@ -32,19 +23,19 @@ const profileCategories = {
         {
             title: "Drama e mistério",
             items: [
-                { img: "https://upload.wikimedia.org/wikipedia/en/5/5e/Bridgerton_S1.jpg", top10: true, badge: "Nova temporada", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=gpv7ayf_tyE" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/0/0c/La_La_Land_%28film%29.png", youtube: "https://www.youtube.com/watch?v=0pdqf4P9MB8" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/3/3d/The_Notebook_film_poster.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=NmHCPHFMUAI" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/a/a4/Inside_Out_2015.png", youtube: "https://www.youtube.com/watch?v=seMwpP0yeu4" },
+                { img: "https://image.tmdb.org/t/p/w500/gMFBhO7TWCSbZUkTRm4mN31Nkjv.jpg", top10: true, badge: "Nova temporada", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=gpv7ayf_tyE" },
+                { img: "https://image.tmdb.org/t/p/w500/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg", youtube: "https://www.youtube.com/watch?v=0pdqf4P9MB8" },
+                { img: "https://image.tmdb.org/t/p/w500/rzdPqYx7Um4FUZeD8wpXqjAUcEr.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=NmHCPHFMUAI" },
+                { img: "https://image.tmdb.org/t/p/w500/aAmfIX3TT40zUHGcCKrlOZRKC7u.jpg", youtube: "https://www.youtube.com/watch?v=seMwpP0yeu4" },
             ]
         },
         {
             title: "Favoritos da Amanda",
             items: [
-                { img: "https://upload.wikimedia.org/wikipedia/en/1/14/Frozen_2013_film_poster.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=TbQm5doF_Uc" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/8/8a/Mamma_Mia%21_poster.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=VHaTOrRPXiU" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/0/0a/Finding_Nemo.jpg", youtube: "https://www.youtube.com/watch?v=2zLkjhLcxCk" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/1/1d/Tangled_poster.jpg", badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=AESmMG6JDWY" },
+                { img: "https://image.tmdb.org/t/p/w500/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=TbQm5doF_Uc" },
+                { img: "https://image.tmdb.org/t/p/w500/qom1SZSENdmHFNZBXbtfnkybYZ9.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=VHaTOrRPXiU" },
+                { img: "https://image.tmdb.org/t/p/w500/eVal1g3a7fOCl6e1TEex1bikqkh.jpg", youtube: "https://www.youtube.com/watch?v=2zLkjhLcxCk" },
+                { img: "https://image.tmdb.org/t/p/w500/vgpXmVaVyUL7GGiDeiK1mKEKzcX.jpg", badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=AESmMG6JDWY" },
             ]
         }
     ],
@@ -52,19 +43,19 @@ const profileCategories = {
         {
             title: "Ação e aventura",
             items: [
-                { img: "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg", top10: true, badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=bLvqoHBptjg" },
-                { img: "https://aventurasnahistoria.com.br/wp-content/uploads/entretenimento/gladiador_2_VvnGVes.jpg", youtube: "https://www.youtube.com/watch?v=cXg62-t8BWs" },
-                { img: "https://i.ytimg.com/vi/OQgySPQ5M3Y/maxresdefault.jpg", badge: "Épico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=zckJCxYxn1g" },
-                { img: "https://ingresso-a.akamaihd.net/img/cinema/cartaz/14413-destaque.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=a06zxOyQrAs" },
+                { img: "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg", top10: true, badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=bLvqoHBptjg" },
+                { img: "https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg", youtube: "https://www.youtube.com/watch?v=cXg62-t8BWs" },
+                { img: "https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg", badge: "Épico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=zckJCxYxn1g" },
+                { img: "https://image.tmdb.org/t/p/w500/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=a06zxOyQrAs" },
             ]
         },
         {
             title: "Épicos para maratonar",
             items: [
-                { img: "https://aventurasnahistoria.com.br/wp-content/uploads/entretenimento/gladiador_2_VvnGVes.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=cXg62-t8BWs" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=bLvqoHBptjg" },
-                { img: "https://ingresso-a.akamaihd.net/img/cinema/cartaz/14413-destaque.jpg", badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=a06zxOyQrAs" },
-                { img: "https://i.ytimg.com/vi/OQgySPQ5M3Y/maxresdefault.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=zckJCxYxn1g" },
+                { img: "https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=cXg62-t8BWs" },
+                { img: "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=bLvqoHBptjg" },
+                { img: "https://image.tmdb.org/t/p/w500/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg", badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=a06zxOyQrAs" },
+                { img: "https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=zckJCxYxn1g" },
             ]
         }
     ],
@@ -72,19 +63,19 @@ const profileCategories = {
         {
             title: "Games e aventura",
             items: [
-                { img: "https://upload.wikimedia.org/wikipedia/en/0/0a/Finding_Nemo.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=2zLkjhLcxCk" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/1/14/Frozen_2013_film_poster.jpg", badge: "Diversão", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=TbQm5doF_Uc" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/a/a4/Inside_Out_2015.png", top10: true, badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=seMwpP0yeu4" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/1/1d/Tangled_poster.jpg", youtube: "https://www.youtube.com/watch?v=AESmMG6JDWY" },
+                { img: "https://image.tmdb.org/t/p/w500/eVal1g3a7fOCl6e1TEex1bikqkh.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=2zLkjhLcxCk" },
+                { img: "https://image.tmdb.org/t/p/w500/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg", badge: "Diversão", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=TbQm5doF_Uc" },
+                { img: "https://image.tmdb.org/t/p/w500/aAmfIX3TT40zUHGcCKrlOZRKC7u.jpg", top10: true, badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=seMwpP0yeu4" },
+                { img: "https://image.tmdb.org/t/p/w500/vgpXmVaVyUL7GGiDeiK1mKEKzcX.jpg", youtube: "https://www.youtube.com/watch?v=AESmMG6JDWY" },
             ]
         },
         {
             title: "Favoritos do Isaac",
             items: [
-                { img: "https://upload.wikimedia.org/wikipedia/en/0/0a/Finding_Nemo.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=2zLkjhLcxCk" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/a/a4/Inside_Out_2015.png", top10: true, youtube: "https://www.youtube.com/watch?v=seMwpP0yeu4" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/1/14/Frozen_2013_film_poster.jpg", youtube: "https://www.youtube.com/watch?v=TbQm5doF_Uc" },
-                { img: "https://upload.wikimedia.org/wikipedia/en/1/1d/Tangled_poster.jpg", badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=AESmMG6JDWY" },
+                { img: "https://image.tmdb.org/t/p/w500/eVal1g3a7fOCl6e1TEex1bikqkh.jpg", badge: "Clássico", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=2zLkjhLcxCk" },
+                { img: "https://image.tmdb.org/t/p/w500/aAmfIX3TT40zUHGcCKrlOZRKC7u.jpg", top10: true, youtube: "https://www.youtube.com/watch?v=seMwpP0yeu4" },
+                { img: "https://image.tmdb.org/t/p/w500/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg", youtube: "https://www.youtube.com/watch?v=TbQm5doF_Uc" },
+                { img: "https://image.tmdb.org/t/p/w500/vgpXmVaVyUL7GGiDeiK1mKEKzcX.jpg", badge: "Novidade", badgeColor: "red", youtube: "https://www.youtube.com/watch?v=AESmMG6JDWY" },
             ]
         }
     ]

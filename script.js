@@ -7,13 +7,21 @@ document.querySelector('header').style.visibility = 'hidden';
 document.querySelector('main').style.visibility = 'hidden';
 
 clickScreen.addEventListener('click', () => {
-    // Toca o som
-    const audio = new Audio('assets/netflix-sound.mp3');
-    audio.volume = 1;
-    audio.play();
 
     // Esconde tela de clique
+clickScreen.addEventListener('click', () => {
     clickScreen.style.display = 'none';
+    introScreen.style.display = 'flex';
+
+    setTimeout(() => {
+        introScreen.classList.add('hidden');
+        setTimeout(() => {
+            introScreen.style.display = 'none';
+            document.querySelector('header').style.visibility = 'visible';
+            document.querySelector('main').style.visibility = 'visible';
+        }, 1000);
+    }, 4000);
+});
 
     // Mostra intro
     introScreen.style.display = 'flex';

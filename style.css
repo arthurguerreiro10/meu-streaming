@@ -134,6 +134,51 @@ header {
 
 .logo { width: 120px; }
 
+.logo-wrap-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-name-main {
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.logo-accent-main {
+    color: #3b82f6;
+}
+
+.intro-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.intro-logo-text {
+    font-size: 42px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+#click-screen .intro-logo-wrap {
+    animation: fadeDown 1s ease both;
+}
+
+#intro-screen .intro-logo-wrap {
+    animation: netflix-intro 4s ease forwards;
+}
+
+@keyframes netflix-intro {
+    0% { transform: scale(3); opacity: 0; filter: brightness(3); }
+    30% { transform: scale(1); opacity: 1; filter: brightness(1); }
+    70% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
 /* ===== MAIN ===== */
 main {
     width: 100%;
